@@ -19,7 +19,14 @@ pipeline{
                 bat 'mvn test'
             }
         }
-        stage('Deploy war file to Artifactory') {
+        stage('SonarQube Analysis') {
+            steps{
+                withSonarQubeEnv('sonarqube1') { 
+                    bat "mvn sonar:sonar"
+                }
+            }
+        }
+        stage('Deploy war file and build info to Artifactory') {
             steps {
                 rtUpload (
                     serverId: "Jfrog-Server",
@@ -40,6 +47,6 @@ pipeline{
                     serverId: "Jfrog-Server"
                 )
             }
-        }
+        } 
     }
 }
