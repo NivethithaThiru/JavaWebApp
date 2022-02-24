@@ -34,11 +34,11 @@ pipeline{
                         "files": [
                             {
                                 "pattern": "*.war",
-                                "target": "webapptest-libs-snapshot-local/com/example/maven-project/webapp/1.0-SNAPSHOT/"
+                                "target": "java-webapp1-libs-snapshot-local/com/example/maven-project/webapp/1.0-SNAPSHOT/"
                             },
                             {
                                 "pattern": "*.jar",
-                                "target": "webapptest-libs-snapshot-local/com/example/maven-project/server/1.0-SNAPSHOT/"
+                                "target": "java-webapp1-libs-snapshot-local/com/example/maven-project/server/1.0-SNAPSHOT/"
                             }
                         ]
                     } '''
