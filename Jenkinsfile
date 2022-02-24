@@ -38,7 +38,7 @@ pipeline{
                             },
                             {
                                 "pattern": "*.jar",
-                                "target": "java-webapp1-libs-snapshot-local/com/example/maven-project/server/1.0-SNAPSHOT/"
+                                "target": "java-webapp1-libs-release-local/com/example/maven-project/server/1.0-SNAPSHOT/"
                             }
                         ]
                     } '''
